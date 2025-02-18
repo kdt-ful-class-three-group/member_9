@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/modal.css" />
+  </head>
+  <body>
+    <div id="root">데이터 추가하는 곳 입니다?</div>
+
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeWriteModal()">×</span>
+
+      <form action="/createdDataList" method="POST">
+        <textarea type="text" name="wrtie" id="write"></textarea>
+      </form>
+
+      <button type="submit">추가해</button>
+    </div>
+    <button type="button" onclick="writeModal()">추가하기</button>
+    <script src="./scripts/writeModal.js"></script>
+  </body>
+</html>
