@@ -9,4 +9,12 @@ const server = http.createServer(function (req, res) {
       (res.statusCode = 200), res.end(main);
     }
   }
+  if (req.method === "POST") {
+  }
+});
+
+const PORT = 3005;
+
+server.listen(PORT, function () {
+  console.log(`http://localhost:${PORT} 에서 서버 구동`);
 });
