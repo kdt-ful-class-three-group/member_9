@@ -1,15 +1,32 @@
 import http from "http";
 import fs from "fs";
 
-const server = http.createServer(function (req, res) {
+let dataList = [];
+
+const server = http.createServer((req, res) => {
+  const url = req.url;
+
   if (req.method === "GET") {
-    if (req.url === "/") {
+    console.log(url);
+    if (url === "/") {
       const main = fs.readFileSync("./index.html", "utf-8");
-      res.setHeader("Content-Type", "text/html");
-      (res.statusCode = 200), res.end(main);
+      res.writeHead(200, "Content-Type", "utf-8", "text/html");
+      res.end(main);
+    } else if (url.endsWith(".js")) {
+      res.writeHead(200, { "Content-Type": "text/javascript" });
+      const script = fs.readFileSync(`./${req.url}`);
+      res.end(script);
+    } else if (url.endsWith(".css")) {
+      res.writeHead(200, { "Content-Type": "text/css" });
+      const css = fs.readFileSync(`./${req.url}`);
+      res.end(css);
+    } else if (url.endsWith(".html")) {
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      const html = fs.readFileSync(`./${req.url}`, "utf-8");
+      res.end(html);
+    } else if (url === "/dataList") {
+      console.log("datalist 요청됨");
     }
-  }
-  if (req.method === "POST") {
   }
 });
 
