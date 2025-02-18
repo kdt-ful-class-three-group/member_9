@@ -28,6 +28,10 @@ const server = http.createServer((req, res) => {
         res.end(css);
       } else if (url === "/dataList") {
         console.log("datalist 요청됨");
+        res.writeHead(200, {
+          "Content-Type": "application/json; charset=utf-8"
+        });
+        res.end(JSON.stringify(dataList));
       }
     }
   } catch {
@@ -53,8 +57,8 @@ const server = http.createServer((req, res) => {
         res.writeHead(302, { Location: "/" }); // 입력 후 새로고침
         res.end();
       });
-      return;
     }
+    return;
   }
 });
 
