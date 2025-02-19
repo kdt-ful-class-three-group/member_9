@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/modal.css" />
+
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/readModal.css" />
   </head>
   <body>
     <div id="root">데이터 추가하는 곳 입니다?</div>
@@ -36,15 +35,15 @@
 
       <div id="readModal" class="readModal">
         <span class="close" onclick="closeReadModal()">×</span>
-        <textarea type="text" name="edit" id="edit"></textarea>
-        <button type="button" onclick="writeModal()" class="editBtn">
+        <div></div>
+
+        <button type="button" onclick="editModal()" class="editBtn">
           수정하기
         </button>
       </div>
     </div>
 
-    <script src="./scripts/writeModal.js"></script>
-    <script src="./scripts/readModal.js"></script>
+    <script src="./scripts/modal.js"></script>
     <script src="./fetch.js"></script>
   </body>
 </html>

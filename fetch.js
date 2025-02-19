@@ -8,7 +8,7 @@ async function getData() {
 
     dataList.forEach((item) => {
       const row = document.createElement("tr");
-      row.innerHTML = `<td onclick="readModal()">${item.write}</td>`;
+      row.innerHTML = `<td onclick="readModal('${item.write}')">${item.write}</td>`;
       datalist.appendChild(row);
     });
   } catch (error) {

@@ -1,5 +1,9 @@
-function readModal() {
-  document.getElementById("readModal").style.display = "block";
+function readModal(text) {
+  const modal = document.getElementById("readModal");
+  const modalContent = modal.querySelector("div");
+  modalContent.innerHTML = `<p>${text}</p>`;
+
+  modal.style.display = "block";
 }
 
 function closeReadModal() {
