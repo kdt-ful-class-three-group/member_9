@@ -1,8 +1,8 @@
 function editModal(text) {
-  const modal = document.getElementById("editModal");
-  const modalContent = modal.querySelector("edit");
+  const modal = document.getElementById("readModal");
+  const modalContent = modal.querySelector("textarea");
   modalContent.innerHTML = `<p>${text}</p>`;
-  document.getElementById("editModal").style.display = "block";
+  modal.style.display = "block";
 }
 
 function closeEditModal() {
