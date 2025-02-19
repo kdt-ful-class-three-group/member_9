@@ -1,8 +1,11 @@
-function editModal() {
+function editModal(text) {
+  const modal = document.getElementById("editModal");
+  const modalContent = modal.querySelector("edit");
+  modalContent.innerHTML = `<p>${text}</p>`;
   document.getElementById("editModal").style.display = "block";
 }
 
-function editModal() {
+function closeEditModal() {
   document.getElementById("editModal").style.display = "none";
 }
 
