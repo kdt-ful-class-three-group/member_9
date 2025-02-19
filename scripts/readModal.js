@@ -1,7 +1,7 @@
-function ReadModal() {
-  document.getElementById("modal").style.display = "block";
+function readModal() {
+  document.getElementById("readModal").style.display = "block";
 }
 
 function closeReadModal() {
-  document.getElementById("modal").style.display = "none";
+  document.getElementById("readModal").style.display = "none";
 }

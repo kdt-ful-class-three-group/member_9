@@ -1,7 +1,7 @@
 function writeModal() {
-  document.getElementById("modal").style.display = "block";
+  document.getElementById("writeModal").style.display = "block";
 }
 
 function closeWriteModal() {
-  document.getElementById("modal").style.display = "none";
+  document.getElementById("writeModal").style.display = "none";
 }

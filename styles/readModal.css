@@ -1,15 +1,15 @@
-.writeModal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+.readModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
   width: 30%; /* Full width */
   height: 20%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(245, 245, 248); /* Fallback color */
-  box-shadow: #f1f1f1;
+  background-color: rgb(107, 107, 119); /* Fallback color */
+  box-shadow: #6f6d6d;
 }
 
 .close {
