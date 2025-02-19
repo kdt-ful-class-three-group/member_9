@@ -9,16 +9,27 @@
   <body>
     <div id="root">데이터 추가하는 곳 입니다?</div>
 
+        <div class="totalList">
+      <table>
+        <thead>
+          <tr>
+            <th>글</th>
+          </tr>
+        </thead>
+        <tbody id="datalist"></tbody>
+      </table>
+
     <div id="modal" class="modal">
       <span class="close" onclick="closeWriteModal()">×</span>
 
       <form action="/createdDataList" method="POST">
         <textarea type="text" name="wrtie" id="write"></textarea>
+        <button type="submit">추가해</button>
       </form>
 
-      <button type="submit">추가해</button>
     </div>
     <button type="button" onclick="writeModal()">추가하기</button>
     <script src="./scripts/writeModal.js"></script>
+    <script src="./fetch.js"></script>
   </body>
 </html>

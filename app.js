@@ -40,13 +40,13 @@ const server = http.createServer((req, res) => {
 
   if (req.method === "POST") {
     if (url === "/createdDataList") {
-      let list = "";
+      let list = [];
 
       req.on("data", (frag) => {
         list += frag;
       });
 
-      req.end("end", () => {
+      req.on("end", () => {
         if (list) {
           const doc = qs.parse(list);
           console.log("받은 글", doc);
@@ -54,7 +54,7 @@ const server = http.createServer((req, res) => {
           dataList.push(doc);
           console.log("새 글 추가", doc);
         }
-        res.writeHead(302, { Location: "/" }); // 입력 후 새로고침
+        res.writeHead(302, { Location: "/addDataPage" }); // 입력 후 새로고침
         res.end();
       });
     }
