@@ -15,3 +15,5 @@ async function getData() {
     console.error("데이터 가져오기 실패:", error);
   }
 }
+
+window.onload = getData;
